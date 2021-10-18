@@ -7,6 +7,14 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
 body {
     font-family: 'Lato',sans-serif;
     font-size: 16px;
@@ -19,31 +27,151 @@ header {
     justify-content: space-between;
     box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.4);
 
+
     img {
         width : 2.5em;
         background-color: none;
+        margin-right: 1.2em;
     }
 
     .navigation {
         display: none;
+        width : 100%;
+
+        @include mQ(48.125em) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap : 1em;
+        }
+        
+        li {
+            font-family: 'Roboto Slab',sans-serif;
+            font-weight: 900;
+            font-size: .8em;
+            cursor: pointer;
+
+            &:hover {
+                color : $brown;
+            }
+        }
+
+        .sign,.join {
+            padding : 5px 10px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .sign {
+            border : 1px solid black;
+            background-color: white;
+            font-weight: 400;
+
+
+            &:hover {
+                background-color: $gray;
+            }
+        }
+
+        .join {
+            border: none;
+            background-color: black;
+            color : white;
+
+            
+            &:hover {
+                background-color: $dark_gray;
+            }
+        }
     }
 
-    button {
+    .hamburger {
         background-color: transparent;
         border: none;
         padding : 10px;
         cursor: pointer;
+
+        @include mQ(48.125em) {
+            display: none;
+        }
     }
 }
 
 main {
     padding : 1.5em;
+
+    @include mQ(47.125em) {
+        padding : 1.5em 1.5em 1.5em 5em;
+    }
+
+    .mainWrap {
+        
+        @include mQ(63.75em) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
     .bottomNav {
         display: none;
+        padding : 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #edebe9;
+        margin-top: -1.5em;
+        margin-left : -5em;
+        margin-right: -1.5em;
+        margin-bottom: 2em;
+
+        @include mQ(48.125em) {
+            display: block;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            gap : 1em;
+            margin-left: 4.5em;
+        }
+
+        a {
+            color : rgba(0,0,0,.87);
+            font-size: .8em;
+            font-weight: 900;
+        }
     }
 
     .leftNav {
         display: none;
+
+        @include mQ(63.75em) {
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: .5em;
+        }
+
+        li {
+            margin-bottom: 1em;
+        }
+
+        a {
+            color : rgba(0,0,0,.58);
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+
+         .headerList {
+            font-family: 'Roboto Slab', sans-serif;
+            font-weight: 900;
+            margin-bottom: 1em;
+            color : $black;
+        }
     }
 
     h1,h2 {
@@ -57,9 +185,6 @@ main {
         font-size: 1em;
     }
 
-    // .menuSection {
-    //     padding-top: 2em;
-    // }
 
     .menuWrap {
         display: flex;
@@ -67,6 +192,8 @@ main {
 
         @include mQ(47.125em) {
             flex-direction: row;
+            justify-content: flex-start;
+            // gap : 5em;
         }
 
         ul {
@@ -87,8 +214,12 @@ main {
             color : $black;
             font-weight: lighter;
             font-size: .8em;
-        }
+            width : 300px;
 
+            @include mQ(47.125em) {
+                font-size: 1em;
+            }
+        }
         img {
             width : 4em;
             height : 4em;
@@ -140,7 +271,10 @@ footer {
         color : $dark_gray;
         font-weight: 700;
     }
-
+    // footer desktop
+    @include mQ(47.125em) {
+        padding : 1.5em 1.5em 1.5em 5em;
+    }
 }
 .stickyPart {
     background-color: $dark_gray;
