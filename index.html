@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="./asset/fontawesome-free-5.15.4-web/css/all.css" class="rel">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <!-- hover effect -->
+    <link rel="stylesheet" href="./asset/Hover-master/css/hover.css" class="rel">
     <title>Menu : Starbuck Coffee Company</title>
 </head>
 <body>
@@ -29,7 +31,21 @@
         </div>
         <button class="hamburger"><i style="font-size: 1.5em;" class="fas fa-bars color"></i></button>
     </header>
+    <!-- mobile sideNav -->
     <main>
+        <!-- sidenav only available at max width 765px -->
+        <div class="sideNav">
+            <ul>
+                <li><a href="#">Menu</a><span><ion-icon name="chevron-forward-outline"></ion-icon></span></li>
+                <li><a href="#">Rewards</a></li>
+                <li><a href="#">Gift Cards</a></li>
+            </ul>
+            <div class="bottomPart">
+                <button class="sign grid_item">Sign in</button>
+                <button class="join grid_item">Join now</button>
+                <div><ion-icon name="location" class="location"></ion-icon><span>Find a store</span></div>
+            </div>
+        </div>
         <div class="bottomNav">
             <!-- bottom nav only visible at min width 770px -->
             <ul>
@@ -289,6 +305,7 @@
         </div>
         <ion-icon name="bag-outline"></ion-icon>
     </div>
+<script src="./app.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>   
 </body>

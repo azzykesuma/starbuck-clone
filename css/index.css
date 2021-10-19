@@ -13,6 +13,28 @@ ul {
   list-style: none;
 }
 
+.sign {
+  border: 1px solid black;
+  background-color: white;
+  font-weight: 400;
+  padding: 10px 15px;
+  border-radius: 50px;
+}
+.sign:hover {
+  background-color: #f3f1e7;
+}
+
+.join {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+}
+.join:hover {
+  background-color: #1e3932;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-size: 16px;
@@ -31,6 +53,8 @@ header {
           justify-content: space-between;
   -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 999;
 }
 header img {
   width: 2.5em;
@@ -74,36 +98,31 @@ header .navigation .sign, header .navigation .join {
   border-radius: 50px;
   cursor: pointer;
 }
-header .navigation .sign {
-  border: 1px solid black;
-  background-color: white;
-  font-weight: 400;
-}
-header .navigation .sign:hover {
-  background-color: #f3f1e7;
-}
-header .navigation .join {
-  border: none;
-  background-color: black;
-  color: white;
-}
-header .navigation .join:hover {
-  background-color: #1e3932;
+header ion-icon {
+  font-size: 2em;
 }
 header .hamburger {
   background-color: transparent;
   border: none;
+  border-radius: 50%;
   padding: 10px;
   cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 @media screen and (min-width: 48.125em) {
   header .hamburger {
     display: none;
   }
 }
+header .hamburger:hover {
+  background-color: #f3f1e7;
+  cursor: pointer;
+}
 
 main {
   padding: 1.5em;
+  position: relative;
 }
 @media screen and (min-width: 47.125em) {
   main {
@@ -147,6 +166,105 @@ main .bottomNav a {
   color: rgba(0, 0, 0, 0.87);
   font-size: 0.8em;
   font-weight: 900;
+}
+main .sideNav {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  z-index: 998;
+  color: white;
+  height: 100%;
+  width: 80%;
+  background-color: white;
+  -webkit-animation: appear 0.5s ease-in-out;
+          animation: appear 0.5s ease-in-out;
+}
+main .sideNav ul {
+  border-bottom: 1px solid #1e3932;
+  padding-bottom: 2em;
+}
+main .sideNav li {
+  margin-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .sideNav a {
+  color: #000000;
+  font-size: 1.5em;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 900;
+}
+main .sideNav ion-icon {
+  font-size: 2em;
+  color: #008248;
+}
+main .sideNav .bottomPart {
+  margin-top: 2em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+main .sideNav .bottomPart > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+main .sideNav .bottomPart > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+main .sideNav .bottomPart > *:nth-child(3) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+main .sideNav .bottomPart > *:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+main .sideNav .bottomPart > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1em;
+}
+main .sideNav .bottomPart .grid_item {
+  width: 80%;
+}
+main .sideNav span {
+  color: #000000;
+}
+@-webkit-keyframes appear {
+  from {
+    right: -1000px;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes appear {
+  from {
+    right: -1000px;
+  }
+  to {
+    right: 0;
+  }
+}
+main .active {
+  display: block;
 }
 main .leftNav {
   display: none;
