@@ -1,6 +1,9 @@
 const hamburger = document.querySelector('.hamburger');
 const sideNav = document.querySelector('.sideNav');
 const main = document.querySelector('main')
+const menuNav = document.querySelector('.menuNav');
+const menuSideNav = document.querySelector('.menuSideNav');
+const back = document.getElementById('back');
 
 hamburger.addEventListener('click', () => {
     sideNav.classList.toggle('active')
@@ -12,4 +15,12 @@ hamburger.addEventListener('click', () => {
         hamburger.innerHTML = '<i style="font-size: 1.5em;" class="fas fa-bars color">'
         main.style.backgroundColor = 'unset'
     }
+})
+
+menuNav.addEventListener('click', () => {
+    menuSideNav.style.display = 'block';
+})
+
+back.addEventListener('click', () => {
+    menuSideNav.style.display = 'none'
 })

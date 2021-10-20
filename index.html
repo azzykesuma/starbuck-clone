@@ -36,7 +36,7 @@
         <!-- sidenav only available at max width 765px -->
         <div class="sideNav">
             <ul>
-                <li><a href="#">Menu</a><span><ion-icon name="chevron-forward-outline"></ion-icon></span></li>
+                <li class="menuNav"><a href="#">Menu</a><span><ion-icon name="chevron-forward-outline"></ion-icon></span></li>
                 <li><a href="#">Rewards</a></li>
                 <li><a href="#">Gift Cards</a></li>
             </ul>
@@ -45,7 +45,18 @@
                 <button class="join grid_item">Join now</button>
                 <div><ion-icon name="location" class="location"></ion-icon><span>Find a store</span></div>
             </div>
+            <div class="menuSideNav">
+                <button id="back"><span><ion-icon name="chevron-back-outline"></ion-icon></span> Menu</button>
+                <ul>
+                    <li>All Products</li>
+                    <li>Featured</li>
+                    <li>Previous</li>
+                    <li>Favorites</li>
+                </ul>
+            </div>
         </div>
+        <!-- in side nav -->
+
         <div class="bottomNav">
             <!-- bottom nav only visible at min width 770px -->
             <ul>
@@ -241,7 +252,7 @@
             </div>
             <div class="flexItem">
                 <ul>
-                    <li><a href="#">Careers</a></li>
+                    <li class="headerList"><a href="#">Careers</a></li>
                     <li><a href="#">Culture and Values</a></li>
                     <li><a href="#">Inclusion, Diversity and Equity</a></li>
                     <li><a href="#">College Achievement Plan</a></li>
@@ -251,7 +262,7 @@
             </div>
             <div class="flexItem">
                 <ul>
-                    <li><a href="#">Social Impact</a></li>
+                    <li class="headerList"><a href="#">Social Impact</a></li>
                     <li><a href="#">People</a></li>
                     <li><a href="#">Planet</a></li>
                     <li><a href="#">Environmental and Social Impact Reporting</a></li>
@@ -259,7 +270,7 @@
             </div>
             <div class="flexItem">
                 <ul>
-                    <li><a href="#">For Business Partner</a></li>
+                    <li class="headerList"><a href="#">For Business Partner</a></li>
                     <li><a href="#">Landlord Support Center</a></li>
                     <li><a href="#">Suppliers</a></li>
                     <li><a href="#">Corporate Gift Card Sales</a></li>
@@ -268,7 +279,7 @@
             </div>
             <div class="flexItem">
                 <ul>
-                    <li><a href="#">Order and Pickup</a></li>
+                    <li class="headerList"><a href="#">Order and Pickup</a></li>
                     <li><a href="#">Order on the App</a></li>
                     <li><a href="#">Order on the Web</a></li>
                     <li><a href="#">Delivery</a></li>
