@@ -84,13 +84,14 @@ header .navigation ul {
           align-items: center;
   gap: 1em;
 }
-header .navigation li {
+header .navigation a {
   font-family: "Roboto Slab", sans-serif;
   font-weight: 900;
   font-size: 0.8em;
   cursor: pointer;
+  color: #1e3932;
 }
-header .navigation li:hover {
+header .navigation a:hover {
   color: #008248;
 }
 header .navigation .sign, header .navigation .join {

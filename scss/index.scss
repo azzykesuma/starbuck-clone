@@ -77,11 +77,12 @@ header {
             gap : 1em;
         }
         
-        li {
+        a {
             font-family: 'Roboto Slab',sans-serif;
             font-weight: 900;
             font-size: .8em;
             cursor: pointer;
+            color : $dark_gray;
 
             &:hover {
                 color : $brown;
