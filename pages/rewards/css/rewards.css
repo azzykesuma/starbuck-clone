@@ -1,10 +1,166 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  padding: unset;
+}
+
+body {
+  font-family: "Roboto Slab", sans-serif;
+}
+
+p {
+  font-size: 1em;
+}
+
+a {
+  color: #1e3932;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+
+h2 {
+  border-bottom: none !important;
+}
+
 .rewardNav {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px;
   background-color: #1e3932;
   border: 1px solid #edebe9;
-  margin-top: -1.5em;
-  margin-left: -5em;
-  margin-right: -1.5em;
-  margin-bottom: 2em;
+}
+.rewardNav div {
+  color: white;
+  font-family: "Roboto Slab", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 0.8em;
+}
+.rewardNav .buttonNav {
+  background-color: transparent;
+  padding: 5px 10px;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  font-weight: 900;
+}
+.rewardNav .buttonNav:hover {
+  background-color: #008248;
+}
+@media screen and (min-width: 47.8125em) {
+  .rewardNav .buttonNav {
+    display: none;
+  }
+}
+
+.hero {
+  background-color: #d4e9e2;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.hero .heroDesc {
+  margin-top: 1em;
+}
+.hero .imageHero {
+  background-image: url("../asset/hero-mobile_2021.jpg");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+}
+.hero .cta-join {
+  margin-block: 2em 1em;
+  background-color: #008248;
+  color: white;
+  font-weight: 900;
+  font-size: 1em;
+  padding: 10px 15px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+.item_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.rules {
+  padding: 4em 1em;
+}
+.rules h2, .rules p {
+  text-align: center;
+}
+.rules p {
+  font-size: 0.9em;
+}
+.rules .rulesWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.rules .number {
+  padding: 10px;
+  border: 2px solid #008248;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2em;
+  color: #008248;
+}
+.rules .rules_description {
+  width: 70%;
+}
+.rules .rules_description p {
+  text-align: left;
 }
