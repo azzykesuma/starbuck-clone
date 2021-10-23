@@ -32,6 +32,12 @@ h2 {
     border-bottom: none !important;
 }
 
+h3 {
+    font-size: 1em;
+    color : rgba(0,0,0,.87);
+    margin-bottom: 1em;
+}
+
 .rewardNav {
     display: flex;
     justify-content: space-between;
@@ -77,8 +83,40 @@ h2 {
     align-items: center;
     justify-content: space-between;
 
+    @include mQ(47.8215em) {
+        flex-direction: row;
+    }
+
     .heroDesc {
         margin-top: 1em;
+
+        @include mQ(47.8215em) {
+            text-align: left;
+            margin-left: 1em;
+        }
+
+        h1 {
+            @include mQ(47.8215em) {
+                font-size: 2.5em;
+            }
+    
+        }
+
+        p {
+            text-decoration: none;
+            @include mQ(47.8215em) {
+                font-size: 1.2em;
+            }
+        }
+
+        a{
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
     }
 
     .imageHero {
@@ -88,6 +126,12 @@ h2 {
         background-size: cover;
         width: 100%;
         height : 60vh;
+
+        @include mQ(47.8215em) {
+            background-image: url('../asset/xl-hero-desktop_2021.png');
+            background-position: -30em center;
+            width: 60%;
+        }
     }
 
     .cta-join {
@@ -108,10 +152,16 @@ h2 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    gap : .8em;
+    margin-top: 2em;
 }
 
 .rules {
     padding : 4em 1em;
+
+    h2 {
+        font-size: 2em;
+    }
 
     h2,p {
         text-align: center;
@@ -124,6 +174,12 @@ h2 {
     .rulesWrap {
         display: flex;
         flex-direction: column;
+        margin-top: 3em;
+
+        @include mQ(47.8125em) {
+            flex-direction: row;
+            gap : 2em;
+        }
     }
     
     .number {
@@ -140,10 +196,61 @@ h2 {
     }
 
     .rules_description {
-        width : 70%;
+        width : 100%;
 
         p {
             text-align: left;
+
+            @include mQ(47.8125em) {
+                text-align: center;
+                font-size: 1.1em;
+                line-height: 1.5em;
+            }
         }
+    }
+
+    .rules_item {   
+        @include mQ(48.8215em) {
+            flex-direction: column;
+            // justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+
+// rewards section
+.rewards {
+    background-color : rgba(212,233,226,.33);
+    text-align: center;
+
+    h2 {
+        font-size: 2em;
+        padding-top: 20px;
+    }
+
+    .pointsWrap {
+        width : 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap : 1em;
+
+        button {
+            border: none;
+            background-color: transparent;
+            font-size: 2em;
+            display: flex;
+            align-items: flex-end;
+            padding : 10px;
+        }
+
+        .color {
+            background-color: yellow;
+        }
+    }
+
+    .rewardsItem {
+        box-shadow: inset 0 7px 9px -7px rgba(0,0,0,.14);
     }
 }

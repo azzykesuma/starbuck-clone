@@ -24,3 +24,33 @@ menuNav.addEventListener('click', () => {
 back.addEventListener('click', () => {
     menuSideNav.style.display = 'none'
 })
+
+// rewards page
+const join = document.getElementById('join');
+const cta = document.querySelector('.cta-join')
+const header = document.getElementById('header_rules')
+const headerTwo = document.getElementById('header_rules_two')
+
+// rewriting innerHTML of join
+const desktopView = window.matchMedia('(min-width : 47.8215em)');
+
+const rewriteHtml = (q) => {
+    if(q.matches) {
+        join.innerHTML = `
+            <p id="join"> Or <span><a href="#">join in the app</a></span> for the best experience </p>
+        `
+        cta.innerHTML = 'Join now'
+        header.innerHTML = 'Create an account'
+        headerTwo.innerHTML = 'Order and pay how you’d like'
+    } else {
+        join.innerHTML = `
+        <a href="#" id="join">Or join online</a>
+    `
+        cta.innerHTML = 'Join in the app'
+        header.innerHTML = 'Order and pay how you’d like'
+        headerTwo.innerHTML = 'Download the Starbucks® app'
+    }
+}
+
+desktopView.addListener(rewriteHtml);
+rewriteHtml(desktopView)
