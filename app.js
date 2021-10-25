@@ -54,3 +54,19 @@ const rewriteHtml = (q) => {
 
 desktopView.addListener(rewriteHtml);
 rewriteHtml(desktopView)
+
+// adding selected style for button
+const pointWrap = document.querySelector('.pointsWrap')
+const btn = pointWrap.getElementsByTagName('button')
+
+
+for(let i = 0; i < btn.length; i++) {
+    btn[i].addEventListener('click', () => {
+        (document.querySelector('.clicked')) ? document.querySelector('.clicked').classList.remove('clicked') : '';
+        btn[i].classList.add('clicked')
+    })
+}
+
+
+
+

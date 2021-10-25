@@ -243,6 +243,11 @@ h3 {
             display: flex;
             align-items: flex-end;
             padding : 10px;
+            cursor: pointer;
+        }
+
+        .clicked {
+            border-bottom: 3px solid $brown;
         }
 
         .color {
@@ -252,5 +257,100 @@ h3 {
 
     .rewardsItem {
         box-shadow: inset 0 7px 9px -7px rgba(0,0,0,.14);
+        background-color: #d4e9e2;
+
+        @include mQ(47.8125em) {
+            display: flex;
+            align-items: center;
+            padding-block : 3em;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        div {
+            padding : 20px;
+            @include mQ(47.8125em) {
+                text-align: left;
+            }
+        }
+
+        h3 {
+
+            @include mQ(47.8125em) {
+                font-size: 1.6em;
+            }
+        }
     }
+}
+
+// extras section
+.extras {
+    padding : 20px;
+
+    h2,p {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    img {
+        width: 7em;
+        height: 7em;
+
+        @include mQ(47.8125em) {
+            margin-bottom: 1.5em;
+        }
+    }
+
+    .extrasWrap {
+        
+        @include mQ(47.8125em) {
+            display: flex;
+        }
+    }
+
+    .extras_flex {
+
+        @include mQ(47.8125em) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    }
+
+    .extrasDescription {
+        
+
+        h3,p {
+            text-align: left;
+            margin-bottom: 1em;
+
+            @include mQ(47.8125em) {
+                text-align: center;
+            }
+        }
+        
+        p {
+            font-size: .9em;
+        }
+
+        @include mQ(47.8125em) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        } 
+    }
+
+}
+
+// earning stars section
+
+.earningStars {
+    margin-top: 6em;
 }

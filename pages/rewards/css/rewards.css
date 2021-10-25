@@ -277,6 +277,10 @@ h3 {
       -ms-flex-align: end;
           align-items: flex-end;
   padding: 10px;
+  cursor: pointer;
+}
+.rewards .pointsWrap .clicked {
+  border-bottom: 3px solid #008248;
 }
 .rewards .pointsWrap .color {
   background-color: yellow;
@@ -284,4 +288,106 @@ h3 {
 .rewards .rewardsItem {
   -webkit-box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.14);
           box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.14);
+  background-color: #d4e9e2;
+}
+@media screen and (min-width: 47.8125em) {
+  .rewards .rewardsItem {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-block: 3em;
+  }
+}
+.rewards .rewardsItem img {
+  width: 100%;
+  height: auto;
+}
+.rewards .rewardsItem div {
+  padding: 20px;
+}
+@media screen and (min-width: 47.8125em) {
+  .rewards .rewardsItem div {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 47.8125em) {
+  .rewards .rewardsItem h3 {
+    font-size: 1.6em;
+  }
+}
+
+.extras {
+  padding: 20px;
+}
+.extras h2, .extras p {
+  text-align: center;
+}
+.extras h2 {
+  font-size: 2em;
+}
+.extras img {
+  width: 7em;
+  height: 7em;
+}
+@media screen and (min-width: 47.8125em) {
+  .extras img {
+    margin-bottom: 1.5em;
+  }
+}
+@media screen and (min-width: 47.8125em) {
+  .extras .extrasWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (min-width: 47.8125em) {
+  .extras .extras_flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+.extras .extrasDescription h3, .extras .extrasDescription p {
+  text-align: left;
+  margin-bottom: 1em;
+}
+@media screen and (min-width: 47.8125em) {
+  .extras .extrasDescription h3, .extras .extrasDescription p {
+    text-align: center;
+  }
+}
+.extras .extrasDescription p {
+  font-size: 0.9em;
+}
+@media screen and (min-width: 47.8125em) {
+  .extras .extrasDescription {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.earningStars {
+  margin-top: 6em;
 }

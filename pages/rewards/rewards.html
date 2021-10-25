@@ -115,16 +115,21 @@
         <section class="rewards">
             <h2>Get your favorites for free</h2>
             <div class="pointsWrap">
-                <button>25 <i class="fas fa-star" style="color: #cba258; font-size: .5em;"></i></button>
-                <button>50 <ion-icon name="star-outline"></ion-icon></button>
-                <button>150 <ion-icon name="star-outline"></ion-icon></button>
-                <button>200 <ion-icon name="star-outline"></ion-icon></button>
-                <button>400 <ion-icon name="star-outline"></ion-icon></button>
+                <button id="25" class="clicked starBtn">25 <i class="fas fa-star" style="color: #cba258; font-size: .5em;"></i></button>
+                <button id="50" class="starBtn">50 <i class="fas fa-star" style="color: #cba258; font-size: .5em;"></i></button>
+                <button id="150" class="starBtn">150 <i class="fas fa-star" style="color: #cba258; font-size: .5em;"></i></button>
+                <button id="200" class="starBtn">200 <i class="fas fa-star" style="color: #cba258; font-size: .5em;"></i></button>
+                <button id="400" class="starBtn">400 <i class="fas fa-star" style="color: #cba258; font-size: .5em;"></i></button>
             </div>
             <div class="rewardsItem">
-                <div class="rewardsImage"></div>
-                <h3 id="reward_item">Customize your drink</h3>
-                <p id="reward_desc">Make your drink just right with an extra espresso shot, dairy substitute or a dash of your favorite syrup.</p>
+                <img id="rewards_item" src="./asset/025.png" alt="">
+                <div>
+                    <h3 id="reward_item">Customize your drink</h3>
+                    <p id="reward_desc">
+                        Make your drink just right with an extra espresso shot, 
+                        dairy substitute or a dash of your favorite syrup.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -136,7 +141,7 @@
                 Say hello to easy ordering, tasty Rewards and—yes, free coffee.
             </p>
             <div class="extrasWrap">
-                <div class="item_flex">
+                <div class="item_flex extras_flex">
                     <img src="./asset/1-fun-freebies.jpg" alt="1-fun-freebies">
                     <div class="extrasDescription">
                         <h3>Fun freebies</h3>
@@ -147,7 +152,7 @@
                         <a href="#">Learn More</a>
                     </div>
                 </div>
-                <div class="item_flex">
+                <div class="item_flex extras_flex">
                     <img src="./asset/2-order-and-pay-ahead.jpg" alt=" 2-order-and-pay-ahead">
                     <div class="extrasDescription">
                         <h3>Order & pay ahead</h3>
@@ -158,7 +163,7 @@
                         <a href="#">Learn More</a>
                     </div>
                 </div>
-                <div class="item_flex">
+                <div class="item_flex extras_flex">
                     <img src="./asset/3-get-to-free-faster.jpg" alt="3-get-to-free-faster">
                     <div class="extrasDescription">
                         <h3>Get to free faster</h3>
@@ -481,6 +486,7 @@
         </div>
     </footer>
 <script src="../../app.js"></script>
+<script src="./rewards.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>   
 </body>
