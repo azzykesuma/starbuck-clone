@@ -32,3 +32,18 @@ starBtn.forEach(btn => {
         }
     })
 })
+
+// form validation
+const redeemForm = document.getElementById('redeemForm');
+const redeemBtn = document.querySelector('.redeemBtn')
+const warning = document.querySelector('.warning')
+const label = document.getElementById('label')
+
+
+
+redeemBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if(redeemForm.value === '') {
+        warning.classList.add('showWarning')
+    }
+})

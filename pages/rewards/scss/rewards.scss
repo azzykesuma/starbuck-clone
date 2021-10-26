@@ -353,4 +353,176 @@ h3 {
 
 .earningStars {
     margin-top: 6em;
+    background-color: #f2f0eb;
+    padding : 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        min-width: 3em;
+        max-width: 60ch;
+    }
+
+    .method_flex {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        h2 {
+            font-size: 1.3em;
+            margin-bottom: 0;
+
+            @include mQ(47.8125em) {
+                font-size: 1.6em;
+            }
+        }
+
+        p {
+            font-size: .8em;
+            line-height: 1.5em;
+
+            @include mQ(47.8125em) {
+                font-size: 1em;
+            }
+        }
+
+        > .wrapper {
+
+            @include mQ(63.75em) {
+                width : 230px;
+            }
+        }
+
+        .methodWrapper {
+            
+
+            .wrapper {
+                display: flex;
+                gap : 1.5em;
+                margin-bottom: 2em;
+            }
+
+            img {
+                width : 7.5em;
+                height : auto;
+            }
+
+            @include mQ(47.8125em) {
+                display: flex;
+                margin-top: 1em;
+                border-bottom: 1px solid $brown;
+            }
+
+            @include mQ(63.75em) {
+                border-bottom: none;
+            }
+        }
+
+        
+        @include mQ(63.75em) {
+            flex-direction: row;
+            border-bottom: 1px solid $brown;
+        }
+        
+        .last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+// redeem section
+.redeem {
+    padding : 50px 20px;
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: .8em;
+        line-height: 1.5em;
+    }
+
+    form {
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    label {
+        display: none;
+        position: absolute;
+        left : 12px;
+        top : -10px;
+        z-index: 999;
+        background-color: white;
+        padding : 1px;
+        font-size: .9em;
+    }
+
+    input {
+        width : 100%;
+        padding : 15px;
+        border-radius: 10px;
+        border-left: none;
+        border-bottom : 1px solid $dark_gray;
+        border-right : 1px solid $dark_gray;
+        border-top : 1px solid $dark_gray;
+        font-size: 1em;
+        font-family: 'Roboto Slab',sans-serif;
+        font-weight: 900;
+
+        &:focus {
+            border : 1px solid $dark_gray;
+            outline: none;
+        }
+    }
+
+    .warning {
+        display: none;
+        position: absolute;
+        bottom  : 3em;
+        left : 0;
+        font-size: .8em;
+        ion-icon {
+            color : red;
+            font-size: 2em;
+        }
+    }
+
+    .showWarning {
+        display: flex;
+        align-items: center;
+        gap : .5em;
+    }
+
+    .redeemBtn {
+        margin-block: 1em;
+        background-color: transparent;
+        padding : 5px 15px;
+        border-radius: 20px;
+        border: 1px solid $dark_gray;
+        font-family: 'Roboto Slab',sans-serif;
+        font-size: 1.1em;
+        color : $dark_gray;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            background-color: $light_gray;
+            cursor: pointer;
+        }
+    }
+
+    .question {
+        margin-top: 2em;
+        font-size: 1.5em;
+    }
 }

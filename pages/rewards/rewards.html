@@ -185,10 +185,10 @@
                 Those Stars add up to (really delicious) Rewards.
             </p>
             <div class="starsWrapper">
-                <div class="item_flex">
+                <div class="item_flex method_flex">
                     <div class="wrapper">
                         <h2>1★ per dollar</h2>
-                        <p></p>
+                        <p>Pay as you go</p>
                     </div>
                     <div class="methodWrapper">
                         <div class="wrapper">
@@ -210,10 +210,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="item_flex">
+                <div class="item_flex method_flex">
                     <div class="wrapper">
                         <h2>2★ per dollar</h2>
-                        <p></p>
+                        <p>Add funds in the app</p>
                     </div>
                     <div class="methodWrapper">
                         <div class="wrapper">
@@ -238,12 +238,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="item_flex">
+                <div class="item_flex method_flex">
                     <div class="wrapper">
                         <h2>3★ per dollar</h2>
-                        <p></p>
+                        <p>With Starbucks® Rewards Visa® Card</p>
                     </div>
-                    <div class="methodWrapper">
+                    <div class="methodWrapper last-child">
                         <div class="wrapper">
                             <img src="./asset/3A.png" alt="">
                             <div>
@@ -268,9 +268,10 @@
                 Enter your code here and we’ll add Stars to your account.
             </p>
             <form action="">
-                <label for="star"></label>
-                <input type="text">
-                <button type="submit">submit</button>
+                <label id="label" for="star">Enter your Star Code</label>
+                <input id="redeemForm" type="text" placeholder="Enter your Star Code">
+                <p class="warning"><span><ion-icon name="close-outline"></ion-icon></span> Please enter a star code</p>
+                <button type="submit" class="redeemBtn">Submit</button>
             </form>
             <p>Have a receipt but don't have a code?</p>
             <p>
