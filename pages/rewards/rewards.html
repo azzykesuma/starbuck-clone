@@ -21,7 +21,7 @@
         <!-- navigation visible at min width 780px -->
         <div class="navigation">
             <ul>
-                <li><a href="#">Menu</a></li>
+                <li><a href="../../index.html">Menu</a></li>
                 <li><a href="./pages/rewards/rewards.html">Rewards</a></li>
                 <li><a href="#">Gift Cards</a></li>
             </ul>
@@ -269,7 +269,11 @@
             </p>
             <form action="">
                 <label id="label" for="star">Enter your Star Code</label>
-                <input id="redeemForm" type="text" placeholder="Enter your Star Code">
+                <input id="redeemForm" 
+                type="text" 
+                placeholder="Enter your Star Code" 
+                value=""
+                />
                 <p class="warning"><span><ion-icon name="close-outline"></ion-icon></span> Please enter a star code</p>
                 <button type="submit" class="redeemBtn">Submit</button>
             </form>
@@ -284,7 +288,7 @@
                 We want to help in any way we can. 
                 You can ask your barista anytime or we’ve answered the most commonly 
                 asked questions 
-                <a href="#">right over here</a>
+                <span><a href="#">right over here</a></span>
             </p>
         </section>
 
@@ -292,7 +296,7 @@
         <section class="terms">
             <p>At participating stores. Restrictions apply.</p>
             <div class="termsWrap">
-                <div class="item_flex">
+                <div class="item_flex terms_flex">
                     <h4>Earning Stars</h4>
                     <p>Stars cannot be earned on purchases of alcohol, Starbucks Cards or Starbucks Card reloads.</p>
                     <p>
@@ -311,15 +315,17 @@
                         you must have made at least one Star-earning transaction.
                     </p>
                 </div>
-                <div class="flex_item">
+                <div class="flex_item terms_flex">
                     <h4>Terms of Use</h4>
                     <p>
-                        For full program details visit <a href="#" target="_blank">starbucks.com/rewards/terms</a>
+                        For full program details visit <span><a href="#" target="_blank">starbucks.com/rewards/terms</a></span>
                     </p>
+                    <br>
                     <p>
                         * Earn 1 Star per $1 when digitally loading your Starbucks Card with your Starbucks® Rewards Visa® 
                         Card: See your Card Rewards Program Agreement for more details.
                     </p>
+
                     <p>
                         Starbucks® Rewards benefits are available at participating Starbucks stores. 
                         Not all stores have the ability to honor Rewards at this time. Visit the <a href="#">Starbucks Store Locator</a>
@@ -328,6 +334,11 @@
                     <p>
                         Deposit and credit card products provided by JPMorgan Chase Bank, N.A. Member FDIC
                     </p>
+                    <p>
+                        Rewards cannot be redeemed for alcoholic beverages or multi-serve items. Not all stores honor tiered Rewards. 
+                        Select stores redeem 150 Stars for free food or drink items only.
+                    </p>
+                    <h4>Redeeming Rewards</h4>
                     <p>
                         Rewards cannot be redeemed for alcoholic beverages or multi-serve items. Not all stores honor tiered Rewards. 
                         Select stores redeem 150 Stars for free food or drink items only.

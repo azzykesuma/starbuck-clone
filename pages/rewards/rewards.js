@@ -34,6 +34,9 @@ starBtn.forEach(btn => {
 })
 
 // form validation
+const redeem = document.querySelector('.redeem');
+const formTag = redeem.getElementsByTagName('form');
+
 const redeemForm = document.getElementById('redeemForm');
 const redeemBtn = document.querySelector('.redeemBtn')
 const warning = document.querySelector('.warning')
@@ -45,5 +48,18 @@ redeemBtn.addEventListener('click', (e) => {
     e.preventDefault();
     if(redeemForm.value === '') {
         warning.classList.add('showWarning')
+        if(warning.classList.contains('showWarning')) {
+            redeemForm.style.border = '1px solid red'
+        }
+    }
+})
+
+redeem.addEventListener('click', e => {
+    if(e.target === redeemForm) {
+        label.style.display = 'block'
+        redeemForm.placeholder = ''
+    } else {
+        label.style.display = 'none'
+        redeemForm.placeholder = 'Enter your star code'
     }
 })
